@@ -23,5 +23,11 @@ namespace HasanBozkusCv.Controllers
             var deneyimler = db.Experience.ToList();
             return PartialView(deneyimler);
         }
+
+        public PartialViewResult Egitimler()
+        {
+            var egitimler = db.Educations.ToList();
+            return PartialView(egitimler);
+        }
     }
 }
