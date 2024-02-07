@@ -29,5 +29,41 @@ namespace HasanBozkusCv.Controllers
             var egitimler = db.Educations.ToList();
             return PartialView(egitimler);
         }
-    }
+
+        public PartialViewResult Yetenekler()
+        {
+            var yetenekler = db.Skills.ToList();
+            return PartialView(yetenekler);
+        }
+
+        public PartialViewResult Hobiler()
+        {
+            var hobiler = db.Hobbys.ToList();
+            return PartialView(hobiler);
+        }
+
+        
+        public PartialViewResult Sertifikalar()
+        {
+            var sertifikalar = db.Certificates.ToList();
+            return PartialView(sertifikalar);
+        }
+          
+		[HttpGet]
+		public PartialViewResult İletisim()
+        {
+            var iletisim = db.Contacts.ToList();
+            return PartialView(iletisim);
+        }
+
+        [HttpPost]
+        public PartialViewResult İletisim(Contacts contacts)
+        {
+            contacts.DateTime = Convert.ToDateTime(DateTime.UtcNow.ToShortDateString());
+            db.Contacts.Add(contacts);
+            db.SaveChanges();
+            return PartialView();
+        }
+
+	}
 }
