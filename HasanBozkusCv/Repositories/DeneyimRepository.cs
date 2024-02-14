@@ -8,5 +8,6 @@ namespace HasanBozkusCv.Repositories
 {
     public class DeneyimRepository : GenericRepository<Experience>
     {
+
     }
 }

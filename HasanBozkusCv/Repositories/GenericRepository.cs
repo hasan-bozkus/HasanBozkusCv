@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
 
 namespace HasanBozkusCv.Repositories
@@ -35,6 +36,11 @@ namespace HasanBozkusCv.Repositories
         public void TUpdate(T t)
         {
             db.SaveChanges();
+        }
+
+        public T Find(Expression<Func<T, bool>> where)
+        {
+            return db.Set<T>().FirstOrDefault(where);
         }
     }
 }
