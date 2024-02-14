@@ -175,7 +175,13 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\DeneyimRepository.cs" />
+    <Compile Include="Repositories\EgitimRepository.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Repositories\HakkımdaRepository.cs" />
+    <Compile Include="Repositories\HobiRepository.cs" />
+    <Compile Include="Repositories\SertifikaRepository.cs" />
+    <Compile Include="Repositories\YetenekRepository.cs" />
+    <Compile Include="Repositories\İletisimRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminLTE-3.0.4\.gitignore" />

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace HasanBozkusCv.Repositories
 {
-    public class DeneyimRepository : GenericRepository<Experience>
+    public class SertifikaRepository : GenericRepository<Certificates>
     {
     }
 }
