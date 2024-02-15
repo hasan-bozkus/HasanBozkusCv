@@ -16,5 +16,6 @@ namespace HasanBozkusCv.Models.Entity
     {
         public int ID { get; set; }
         public string Skill { get; set; }
+        public Nullable<byte> Ratio { get; set; }
     }
 }
