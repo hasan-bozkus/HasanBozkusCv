@@ -1,0 +1,33 @@
+﻿@model HasanBozkusCv.Models.Entity.Educations
+@{
+    ViewBag.Title = "EgitimDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4> Eğitim Düzenleme Sayfası</h4>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Title, new { @Class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Title, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.SubTitle, new { @Class = "form-control" })
+    @Html.ValidationMessageFor(x => x.SubTitle, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Alt Başlık 2")
+    @Html.TextBoxFor(x => x.SubTitle2, new { @Class = "form-control" })
+    @Html.ValidationMessageFor(x => x.SubTitle2, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Genel Not Ortalaması")
+    @Html.TextBoxFor(x => x.GNO, new { @Class = "form-control" })
+    @Html.ValidationMessageFor(x => x.GNO, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.DateTime, new { @Class = "form-control" })
+    @Html.ValidationMessageFor(x => x.DateTime, "", new { @style = "color:red" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+

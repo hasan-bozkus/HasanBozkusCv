@@ -11,14 +11,31 @@ namespace HasanBozkusCv.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Educations
     {
         public int ID { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ geçme")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter giriniz")]
         public string Title { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ geçme")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter giriniz")]
         public string SubTitle { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ geçme")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter giriniz")]
         public string SubTitle2 { get; set; }
+
+       
+        [StringLength(10, ErrorMessage = "En fazla 10 karakter giriniz")]
+        [Required(ErrorMessage = "Bu alaný boþ geçme")]
         public string GNO { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ geçme")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter giriniz")]
         public string DateTime { get; set; }
     }
 }
