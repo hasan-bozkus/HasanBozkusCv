@@ -17,6 +17,11 @@ namespace HasanBozkusCv.Controllers
             var degerler = db.Abouts.ToList();
             return View(degerler);
         }
+        public PartialViewResult SosyalMedya()
+        {
+            var sosyalMedya = db.SocialMedia.ToList();
+            return PartialView(sosyalMedya);
+        }
 
         public PartialViewResult Deneyim()
         {

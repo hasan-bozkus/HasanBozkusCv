@@ -83,6 +83,15 @@
           <Property Name="Skill" Type="nvarchar" MaxLength="100" />
           <Property Name="Ratio" Type="tinyint" />
         </EntityType>
+        <EntityType Name="SocialMedia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="100" />
+          <Property Name="Link" Type="nvarchar" MaxLength="100" />
+          <Property Name="Icon" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityContainer Name="DBCvModelStoreContainer">
           <EntitySet Name="Abouts" EntityType="Self.Abouts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
@@ -92,6 +101,7 @@
           <EntitySet Name="Experience" EntityType="Self.Experience" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Hobbys" EntityType="Self.Hobbys" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Skills" EntityType="Self.Skills" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SocialMedia" EntityType="Self.SocialMedia" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -184,7 +194,17 @@
           <EntitySet Name="Experience" EntityType="Self.Experience" />
           <EntitySet Name="Hobbys" EntityType="Self.Hobbys" />
           <EntitySet Name="Skills" EntityType="Self.Skills" />
+          <EntitySet Name="SocialMedia" EntityType="DBCvModel.SocialMedia" />
         </EntityContainer>
+        <EntityType Name="SocialMedia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Icon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -274,6 +294,16 @@
                 <ScalarProperty Name="Ratio" ColumnName="Ratio" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Skill" ColumnName="Skill" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SocialMedia">
+            <EntityTypeMapping TypeName="DBCvModel.SocialMedia">
+              <MappingFragment StoreEntitySet="SocialMedia">
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

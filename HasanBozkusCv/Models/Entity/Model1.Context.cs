@@ -33,5 +33,6 @@ namespace HasanBozkusCv.Models.Entity
         public virtual DbSet<Experience> Experience { get; set; }
         public virtual DbSet<Hobbys> Hobbys { get; set; }
         public virtual DbSet<Skills> Skills { get; set; }
+        public virtual DbSet<SocialMedia> SocialMedia { get; set; }
     }
 }

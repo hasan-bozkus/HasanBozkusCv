@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="DBCvModel.Experience" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBCvModel.Hobbys" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBCvModel.Skills" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBCvModel.SocialMedia" Width="1.5" PointX="8.875" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
