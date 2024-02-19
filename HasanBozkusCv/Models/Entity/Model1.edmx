@@ -32,6 +32,7 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Descpription" Type="nvarchar" MaxLength="250" />
+          <Property Name="DateTime" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Contacts">
           <Key>
@@ -123,6 +124,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Descpription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DateTime" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Contacts">
           <Key>
@@ -215,6 +217,7 @@
           <EntitySetMapping Name="Certificates">
             <EntityTypeMapping TypeName="DBCvModel.Certificates">
               <MappingFragment StoreEntitySet="Certificates">
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Descpription" ColumnName="Descpription" />
               </MappingFragment>

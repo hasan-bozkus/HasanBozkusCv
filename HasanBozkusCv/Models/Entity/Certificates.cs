@@ -16,5 +16,6 @@ namespace HasanBozkusCv.Models.Entity
     {
         public int ID { get; set; }
         public string Descpription { get; set; }
+        public string DateTime { get; set; }
     }
 }

@@ -1,26 +1,38 @@
-﻿
+﻿@using HasanBozkusCv.Models.Entity
+@model List<Abouts>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Hakkımda Menüsü</h2>
+<br />
+<h2>Hakkımda Düzenleme Sayfası</h2>
+<br />
+<form method="post">
+    @foreach (var item in Model)
+    {
+        <label>Ad</label> 
+        <input type="text" name="Name" value="@item.Name" class="form-control" />
+        <br />
+        <label>Soyad</label> 
+        <input type="text" name="Surname" value="@item.Surname" class="form-control" />
+        <br />
+        <label>Adress</label> 
+        <input type="text" name="Address" value="@item.Address" class="form-control" />
+        <br />
+        <label>Telefon</label> 
+        <input type="text" name="Phone" value="@item.Phone" class="form-control" />
+        <br />
+        <label>E-Posta</label> 
+        <input type="text" name="Mail" value="@item.Mail" class="form-control" />
+        <br />
+        <label>Resim</label> 
+        <input type="text" name="Image" value="@item.Image" class="form-control" />
+        <br />
+        <label>Açıklama</label>
+        <textarea rows="5" class="form-control" name="Description">@item.Description</textarea>
 
-<table class="table table-bordered">
-    <tr>
-        <th>ID</th>
-        <th>Ad</th>
-        <th>Şehir</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Murat</td>
-        <td>Elazığ</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Mesut</td>
-        <td>Adana</td>
-    </tr>
-</table>
-
+    }
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>

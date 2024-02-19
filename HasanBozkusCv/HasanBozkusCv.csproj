@@ -132,8 +132,11 @@
     <Compile Include="Controllers\DeneyimController.cs" />
     <Compile Include="Controllers\EgitimController.cs" />
     <Compile Include="Controllers\HakkımdaController.cs" />
+    <Compile Include="Controllers\HobilerimController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SertifikaController.cs" />
     <Compile Include="Controllers\YetenekController.cs" />
+    <Compile Include="Controllers\İletisimController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2368,6 +2371,11 @@
     <Content Include="Views\Egitim\Index.cshtml" />
     <Content Include="Views\Egitim\EgitimEkle.cshtml" />
     <Content Include="Views\Egitim\EgitimDuzenle.cshtml" />
+    <Content Include="Views\Sertifika\Index.cshtml" />
+    <Content Include="Views\Sertifika\SertifikaGetir.cshtml" />
+    <Content Include="Views\Sertifika\SertifikaEkle.cshtml" />
+    <Content Include="Views\İletisim\Index.cshtml" />
+    <Content Include="Views\Hobilerim\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

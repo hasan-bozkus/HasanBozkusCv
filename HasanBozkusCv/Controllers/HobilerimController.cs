@@ -8,30 +8,24 @@ using System.Web.Mvc;
 
 namespace HasanBozkusCv.Controllers
 {
-    public class HakkımdaController : Controller
+    public class HobilerimController : Controller
     {
-        GenericRepository<Abouts> repo = new GenericRepository<Abouts>();
-
-        // GET: Hakkımda
+        GenericRepository<Hobbys> repo = new GenericRepository<Hobbys>();
+        // GET: Hobilerim
 
         [HttpGet]
         public ActionResult Index()
         {
-            var hakkimda = repo.List();
-            return View(hakkimda);
-        }
-
+            var hobiler = repo.List();
+            return View(hobiler);
+        } 
+        
         [HttpPost]
-        public ActionResult Index(Abouts p)
+        public ActionResult Index(Hobbys p)
         {
             var t = repo.Find(x => x.ID == 1);
-            t.Name = p.Name;
-            t.Surname = p.Surname;
-            t.Address = p.Address;
-            t.Mail = p.Mail;
-            t.Phone = p.Phone;
             t.Description = p.Description;
-            t.Image = p.Image;
+            t.Description2 = p.Description2;
             repo.TUpdate(t);
             return RedirectToAction("Index");
         }
