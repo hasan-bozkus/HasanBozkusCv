@@ -7,6 +7,7 @@ using HasanBozkusCv.Models.Entity;
 
 namespace HasanBozkusCv.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         DBCvEntities db = new DBCvEntities();

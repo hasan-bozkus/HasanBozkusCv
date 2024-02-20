@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace HasanBozkusCv.Controllers
 {
+    [Authorize]
     public class EgitimController : Controller
     {
         GenericRepository<Educations> repo = new GenericRepository<Educations>();

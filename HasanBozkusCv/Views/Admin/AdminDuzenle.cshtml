@@ -1,0 +1,24 @@
+﻿@model HasanBozkusCv.Models.Entity.Admin
+@{
+    ViewBag.Title = "AdminDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h4>Deneyim Güncelleme Sayfası</h4>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Admin ID")
+    @Html.TextBoxFor(x => x.ID, new { @Class = "form-control disabled" })
+    <br />
+    @Html.Label("Kullanıcı Adı")
+    @Html.TextBoxFor(x => x.UserName, new { @Class = "form-control" })
+    <br />
+    @Html.Label("Şifresi")
+    @Html.TextBoxFor(x => x.Password, new { @Class = "form-control" })
+
+    <button class="btn btn-info">Güncelle</button>
+</form>
+
+
