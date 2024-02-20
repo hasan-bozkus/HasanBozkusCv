@@ -19,7 +19,7 @@ namespace HasanBozkusCv.Controllers
         }
         public PartialViewResult SosyalMedya()
         {
-            var sosyalMedya = db.SocialMedia.ToList();
+            var sosyalMedya = db.SocialMedia.Where(x => x.Status == true).ToList();
             return PartialView(sosyalMedya);
         }
 
@@ -47,15 +47,15 @@ namespace HasanBozkusCv.Controllers
             return PartialView(hobiler);
         }
 
-        
+
         public PartialViewResult Sertifikalar()
         {
             var sertifikalar = db.Certificates.ToList();
             return PartialView(sertifikalar);
         }
-          
-		[HttpGet]
-		public PartialViewResult İletisim()
+
+        [HttpGet]
+        public PartialViewResult İletisim()
         {
             var iletisim = db.Contacts.ToList();
             return PartialView(iletisim);
@@ -70,5 +70,5 @@ namespace HasanBozkusCv.Controllers
             return PartialView();
         }
 
-	}
+    }
 }

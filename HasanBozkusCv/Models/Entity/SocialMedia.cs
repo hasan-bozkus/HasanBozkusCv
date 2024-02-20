@@ -18,5 +18,6 @@ namespace HasanBozkusCv.Models.Entity
         public string Ad { get; set; }
         public string Link { get; set; }
         public string Icon { get; set; }
+        public Nullable<bool> Status { get; set; }
     }
 }

@@ -91,6 +91,7 @@
           <Property Name="Ad" Type="nvarchar" MaxLength="100" />
           <Property Name="Link" Type="nvarchar" MaxLength="100" />
           <Property Name="Icon" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityContainer Name="DBCvModelStoreContainer">
           <EntitySet Name="Abouts" EntityType="Self.Abouts" Schema="dbo" store:Type="Tables" />
@@ -204,6 +205,7 @@
           <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Link" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Icon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -300,6 +302,7 @@
           <EntitySetMapping Name="SocialMedia">
             <EntityTypeMapping TypeName="DBCvModel.SocialMedia">
               <MappingFragment StoreEntitySet="SocialMedia">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Icon" ColumnName="Icon" />
                 <ScalarProperty Name="Link" ColumnName="Link" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />
